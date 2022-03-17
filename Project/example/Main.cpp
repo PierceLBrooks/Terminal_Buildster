@@ -35,8 +35,13 @@
 using namespace std;
 using namespace sf;
 
+#ifdef TERMINAL_MAIN
 #include "vterm.h"
 #include "vterm_keycodes.h"
+#else
+#include "vterm/vterm.h"
+#include "vterm/vterm_keycodes.h"
+#endif
 
 #include "OptionFile.hpp"
 #include "Terminal.hpp"
